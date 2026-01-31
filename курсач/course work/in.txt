@@ -1,0 +1,12 @@
+Ukraine,Kyiv,Europe,603628,41000000
+Germany,Berlin,Europe,357022,83000000
+France,Paris,Europe,551695,67000000
+Russia,Moscow,Europe,17100000,144000000
+Canada,Ottawa,America,9985000,38000000
+China,Beijing,Asia,9597000,1412000000
+India,Delhi,Asia,3287000,1380000000
+Brazil,Brasilia,America,8516000,213000000
+Australia,Canberra,Australia,7692000,25700000
+USA,Washington,America,9834000,331000000
+Japan,,Asia,377975,126500000
+Italy,Rome,Europe,301340,59550000

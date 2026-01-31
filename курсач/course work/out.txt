@@ -1,0 +1,19 @@
+1. search be capital:
+capiital 'Japan,,Asia,377975,126500000' not found
+
+2. countries with the largest area: 
+- Russia
+
+3. all counties b population: 
+China: 1412000000 people
+India: 1380000000 people
+USA: 331000000 people
+Brazil: 213000000 people
+Russia: 144000000 people
+Japan: 126500000 people
+Germany: 83000000 people
+France: 67000000 people
+Italy: 59550000 people
+Ukraine: 41000000 people
+Canada: 38000000 people
+Australia: 25700000 people

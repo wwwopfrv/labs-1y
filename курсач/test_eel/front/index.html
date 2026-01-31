@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+<body> 
+    <!-- кроха, очевидно же, чтобы перевести что-то, тебе надо что-то ввести, как это делается в хтмл? вплане ввести понял? ыаааааааааа -->
+    <input type="number" id="rub-input" placeholder="enter value">
+    <!-- ia pomniu kak takoie sdelati cherezzz select option а зачем нам селект опшн если нам нужно просто написать туда число т ы селектор от 0 до 1ккк сделаешь? -->
+    <!-- теперь нужны эти самые a eto sho konkretno посмотри в код
+    у тебя лист из дивов, в котором есть спаны с названием валюты и инпут
+    получается
+     -->
+    <li id="list-cur">
+    <div>
+        <span>USD</span>
+        <input type="number" name="" id="">
+    </div>
+
+    <div>
+        <span>EUR</span>
+        <input type="number" name="" id="">
+    </div>
+
+    <div>
+        <span>JPY</span>
+        <input type="number" name="" id="">
+    </div>
+    <!-- д ивам не надо класс ?ye? ну тепа в этом случае нет, посмотри на код, там никак классы дивов не используются потом ты захочешь условно в ксс чута сделать, тогда да, придется там им класс а щас нет -->
+    <!-- мм? 3hvatit mb& да конечно ондого тоже бы хватило -->
+    </li>
+    <button id="btn-sum">рассчитать</button>
+    <img src ='' id="cat-div" width="200" height="200">
+    <!-- это как в питоне когда у тебя условно терь смари дальше, чтобы код заработал, тебе нужна кнопка, видишь? da сделай тажа кнопочку-->
+    <script>
+        async function create_cur_for_rub (){
+        // получаем значение введенных рублей
+        let value_rub = parseFloat(document.getElementById("rub-input").value);
+        // получаем список всех input'ов, в которые надо перевести рубли
+        let list_curs = document.getElementById("list-cur").children; 
+        for (let div_cur of list_curs) {
+            // берем название денежной единицы
+            let name_cur = div_cur.getElementsByTagName("span")[0].textContent;
+            // теперь передает значение в Python для обработки
+            let value_cur = await eel.convert_value_py(value_rub, "RUB", name_cur)();
+            // выводим на экран полученное значение
+            div_cur.getElementsByTagName("input")[0].value = value_cur;
+            }
+        let myImg = document.getElementById('cat-div')
+        myImg.src = 'https://cataas.com/cat/says/banana' крч да, поиграйся пока с этим самым  с кем ну с eel сама, есть какая-то идея? что можно было бы сделать, приложение условно какое-то будильник там, или ремайндер будильник мб ну уот будильник тада будем делать вначале сделай его макетик тепа, куда будут писать туда суда а потом усядемса с тобой за этот самый за бэк разбирать тепа сделать макет же не сложно буит? норм норм ну уот
+        }  
+        document.getElementById("btn-sum").onclick = create_cur_for_rub;
+    </script>
+</body>
+</html>

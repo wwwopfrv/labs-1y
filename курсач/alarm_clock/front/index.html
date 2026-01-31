@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="eel.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>установить время</h1>
+
+        <label>hour
+            <input type="number" id="hours" min="0" max="23">
+        </label>
+
+        <label>minutes
+            <input type="number" id="minutes" min="0" max="59">
+        </label>
+    </div>
+    <!-- давай по шажочкам, создай скрипт который выдает алерт "вы нажали кнопку", когда ты жмешь на копку селект тайм -->
+    <button id="time">select time</button>
+
+    <script>
+        async function alert_name() {
+            let name = await eel.namess()
+            console.log(name)
+            alert("Hello ", name)
+        }
+
+
+        document.getElementById("time").onclick = alert_name;
+    </script>
+    <!-- теперь давай сделаем так, чтобы он вызывал функцию из питона, которая в алерт будет давать разные имена, тепа привет саша привет костя привет андрей -->
+</body>
+</html>
